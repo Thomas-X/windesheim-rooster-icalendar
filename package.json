@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "backpack-core": "latest",
     "blob-to-buffer": "^1.2.8",
     "blob-util": "^2.0.2",
     "cozy-ical": "^1.1.22",
@@ -19,8 +20,9 @@
     "ical": "^0.5.0",
     "ical2json": "^1.2.0",
     "ics": "^2.7.2",
+    "moment": "^2.22.2",
+    "momentjs": "^2.0.0",
     "node-fetch": "^2.2.0",
-    "uuid": "^3.3.2",
-    "backpack-core": "latest"
+    "uuid": "^3.3.2"
   }
 }

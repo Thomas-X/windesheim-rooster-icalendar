@@ -6,6 +6,7 @@ import ical2json from 'ical2json';
 import express from 'express';
 import uuid from 'uuid/v1';
 import axios from 'axios';
+import moment from 'moment';
 
 const app = express();
 const executecmd = util.promisify(exec);
@@ -22,7 +23,10 @@ const _curl = async () => {
     }
 };
 
-app.get('/calendar', (req, res) => {
+app.get('/calendar/:days', (req, res) => {
+    if (!req.params.days) {
+        return res.sendStatus(402);
+    }
     _curl()
         .then(async (r) => {
             const {elementIds, elementPeriods, elementRoomLocks, elements} = JSON.parse(r).result.data;
@@ -44,7 +48,8 @@ app.get('/calendar', (req, res) => {
                 }
             }
 
-            const uri = "https://roosters.windesheim.nl/WebUntis/Ical.do?elemType=1&elemId=2982&rpt_sd=2018-09-10";
+            const time = moment().add(req.params.days, 'days').format('YYYY-MM-DD');
+            const uri = `https://roosters.windesheim.nl/WebUntis/Ical.do?elemType=1&elemId=2982&rpt_sd=${time}`;
 
             const response = await axios({
                 method: 'GET',
