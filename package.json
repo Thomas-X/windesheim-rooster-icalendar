@@ -1,0 +1,25 @@
+{
+  "name": "windesheim-rooster-icalendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "backpack",
+    "build": "backpack build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "blob-to-buffer": "^1.2.8",
+    "blob-util": "^2.0.2",
+    "cozy-ical": "^1.1.22",
+    "download-file": "^0.1.5",
+    "express": "^4.16.3",
+    "ical": "^0.5.0",
+    "ical2json": "^1.2.0",
+    "ics": "^2.7.2",
+    "node-fetch": "^2.2.0",
+    "uuid": "^3.3.2"
+  }
+}

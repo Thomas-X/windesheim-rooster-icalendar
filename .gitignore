@@ -1,0 +1,4 @@
+build/
+.idea/
+.git/
+node_nodules/
