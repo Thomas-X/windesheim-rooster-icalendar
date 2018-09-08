@@ -20,6 +20,7 @@
     "ical2json": "^1.2.0",
     "ics": "^2.7.2",
     "node-fetch": "^2.2.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "backpack-core": "latest"
   }
 }
