@@ -11,6 +11,8 @@ const app = express();
 const executecmd = util.promisify(exec);
 
 
+// TODO: add dynamic date as parameter on line 47
+
 const _curl = async () => {
     const {stdout, stderr} = await executecmd(`curl 'https://roosters.windesheim.nl/WebUntis/Timetable.do?request.preventCache=1536270510278' -H 'Cookie: JSESSIONID=E41037D002E962BADB5483E9D09C03FE; schoolname="_V2luZGVzaGVpbQ=="' -H 'Origin: https://roosters.windesheim.nl' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7,af;q=0.6' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: */*' -H 'Referer: https://roosters.windesheim.nl/WebUntis/?school=Windesheim' -H 'X-Requested-With: XMLHttpRequest' -H 'Connection: keep-alive' --data 'ajaxCommand=getWeeklyTimetable&elementType=1&elementId=2982&date=20180910&formatId=7&departmentId=0&filterId=-2' --compressed`);
     if (stdout) {
