@@ -7,8 +7,10 @@ import express from 'express';
 import uuid from 'uuid/v1';
 import axios from 'axios';
 import moment from 'moment';
+import morgan from 'morgan';
 
 const app = express();
+app.use(morgan('dev'))
 const executecmd = util.promisify(exec);
 
 
